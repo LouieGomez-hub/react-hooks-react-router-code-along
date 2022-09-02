@@ -11,12 +11,45 @@ function Home() {
   );
 }
 
+function About() {
+  return (
+    <div>
+      <h1>This is my about component!</h1>
+    </div>
+  );
+}
+
+function Login() {
+  return (
+    <div>
+      <h1>Login</h1>
+      <form>
+        <div>
+          <input type="text" name="username" placeholder="Username" />
+        </div>
+        <div>
+          <input type="text" name="password" placeholder="Password" />
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+}
+
 // Step 2. Use <Route> components to define client-side routes in our app
 function App() {
   return (
-    <Route path="/">
-      <Home />
-    </Route>
+    <div>
+      <Route path="/">
+        <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+    </div>
   );
 }
 
