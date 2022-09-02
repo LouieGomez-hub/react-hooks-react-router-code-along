@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // Step 1. Import react-router functions
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function Home() {
   return (
@@ -39,8 +39,8 @@ function Login() {
 // Step 2. Use <Route> components to define client-side routes in our app
 function App() {
   return (
-    <div>
-      <Route path="/">
+    <Switch>
+      <Route exact path="/">
         <Home />
       </Route>
       <Route path="/about">
@@ -48,8 +48,8 @@ function App() {
       </Route>
       <Route path="/login">
         <Login />
-      </Route>
-    </div>
+      </Route> 
+    </Switch>
   );
 }
 
