@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // Step 1. Import react-router functions
-import { BroswerRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function Home() {
   return (
@@ -22,8 +22,8 @@ function App() {
 
 // Step 3. Use <BrowserRouter> component to wrap the entire application and provide React Router context features
 ReactDOM.render(
-  <BroswerRouter>
+  <BrowserRouter>
     <App />
-  </BroswerRouter>, 
+  </BrowserRouter>,
   document.getElementById("root")
 );
